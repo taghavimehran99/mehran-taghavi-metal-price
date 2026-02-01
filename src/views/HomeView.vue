@@ -1,9 +1,9 @@
 <script setup lang="ts">
-// import heloWord from 'src/components/HelloWorld.vue'
+import login from 'src/components/login.vue';
 </script>
 
 <template>
   <main>
-    <!-- <heloWord /> -->
+    <login />
   </main>
 </template>

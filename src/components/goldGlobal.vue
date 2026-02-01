@@ -19,7 +19,6 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-
 const globalGoldPrice = ref(null)
 const gramGold24 = ref(null)
 const gramGold18 = ref(null)
@@ -32,7 +31,7 @@ const calGoldPersain = computed(() => {
   const one = gramGold18.value * usde.value
   gramGoldReal18.value = one
 })
-console.log(gramGoldReal18.toLocaleString())
+// console.log(gramGoldReal18.toLocaleString())
 
 onMounted(async () => {
   try {
@@ -51,7 +50,20 @@ onMounted(async () => {
   } catch (error) {
     console.log('errore', error)
   }
-})
+}, 
+
+// async ()=>{
+//   try {
+//     const res =await axios.get('https://api.gold-api.com/price/XAU')
+//     const slm =res.data
+//     console.log(slm);
+    
+//   } catch (error) {
+    
+//   }
+// }
+
+)
 </script>
 
 <style scoped>
