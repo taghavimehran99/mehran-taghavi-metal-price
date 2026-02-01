@@ -5,13 +5,28 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: () => import('/src/components/login.vue'),
+      name: 'loginLayout',
+      component: () => import('@/Layout/loginLayout.vue'),
+      redirect: { name: 'login' },
+      children: [
+        {
+          path: 'login',
+          name: 'login',
+          component: () => import('@/pages/login.vue'),
+        },
+      ],
     },
     {
-      path: '/gold',
+      path: '/',
       name: 'gold',
-      component: () => import('/src/components/goldGlobal.vue'),
+      component: () => import('@/Layout/mainLayout.vue'),
+      children: [
+        {
+          path: 'global',
+          name: 'global',
+          component: () => import('@/pages/goldGlobal.vue'),
+        },
+      ],
     },
   ],
 })

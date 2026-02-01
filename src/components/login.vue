@@ -31,7 +31,7 @@ const router = useRouter()
 function login() {
   if (name.value !== '' && password.value !== '') {
     localStorage.setItem('token', Math.random())
-    router.push('/gold')
+    router.push({name:'global'})
     tosat.value = false
   } else {
     tosat.value = true
