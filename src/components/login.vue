@@ -30,8 +30,8 @@ const router = useRouter()
 
 function login() {
   if (name.value !== '' && password.value !== '') {
-    localStorage.setItem('token', Math.random())
-    router.push({name:'global'})
+    localStorage.setItem('isLogin', '234567ghjk')
+    router.push({ name: 'gold' })
     tosat.value = false
   } else {
     tosat.value = true
@@ -41,12 +41,10 @@ function login() {
 
 <style scoped lang="scss">
 .login {
-  display: flex;
-  align-content: center;
   &-form {
     display: block;
     height: 400px;
-    width: 200px;
+    width: 250px;
 
     &-name {
       width: 250px;
@@ -69,7 +67,7 @@ function login() {
       height: 30px;
       padding: 3px;
       border-radius: 10px;
-      border: 0px;
+      border: solid 2px gray;
       padding: 10px;
     }
 

@@ -1,11 +1,11 @@
 <template>
   <section>
-    <priceGold />
+    <priceSilver />
   </section>
 </template>
 
 <script setup>
-import priceGold from '@/components/gold.vue'
+import priceSilver from '@/components/silver.vue'
 </script>
 
 <style></style>
