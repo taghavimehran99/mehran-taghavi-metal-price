@@ -1,5 +1,6 @@
 <template>
-  <section>
+  <section style="display: block;">
+    <h3>this is websit</h3>
     <priceGold />
   </section>
 </template>

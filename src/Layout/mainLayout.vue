@@ -1,12 +1,14 @@
 <template>
+  <header class="contant-main-header">price page</header>
+
   <section class="contant">
     <slider class="contant-slider" />
     <main class="contant-main">
-      <header class="contant-main-header">price page</header>
-      <router-view  class="contant-main-rout"/>
-      <footer class="contant-main-footer">footer</footer>
+      <router-view class="contant-main-rout" />
     </main>
   </section>
+
+  <footer class="contant-main-footer">footer</footer>
 </template>
 
 <script setup>
@@ -35,10 +37,9 @@ import slider from '@/components/slider.vue'
     height: 90vh;
     width: 50vw;
 
-    &-rout{
+    &-rout {
       display: flex;
       height: 85vh;
-
     }
 
     &-header {

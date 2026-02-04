@@ -12,7 +12,9 @@
         id="password"
         placeholder="password"
       />
-      <span v-if="tosat" class="" style="color: red">Please login</span>
+      <span v-if="blanckInputValue" class="" style="color: red"
+        >Please entry user name password</span
+      >
       <button @click.prevent="login" class="login-form-btn">login</button>
     </form>
   </section>
@@ -25,21 +27,23 @@ import { useRouter } from 'vue-router'
 const name = ref('')
 const password = ref('')
 const isligon = ref(true)
-const tosat = ref(false)
+const blanckInputValue = ref(false)
 const router = useRouter()
 
 function login() {
   if (name.value !== '' && password.value !== '') {
     localStorage.setItem('isLogin', '234567ghjk')
     router.push({ name: 'gold' })
-    tosat.value = false
+    blanckInputValue.value = false
   } else {
-    tosat.value = true
+    blanckInputValue.value = true
   }
 }
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/varebels.scss';
+
 .login {
   &-form {
     display: block;
@@ -59,7 +63,6 @@ function login() {
       height: 30px;
       padding: 3px;
       border-radius: 10px;
-      border: 0px;
     }
 
     &-info {
@@ -67,8 +70,8 @@ function login() {
       height: 30px;
       padding: 3px;
       border-radius: 10px;
-      border: solid 2px gray;
       padding: 10px;
+      border: solid 1px $clo-gray-border;
     }
 
     &-btn {
@@ -76,9 +79,9 @@ function login() {
       height: 30px;
       padding: 3px;
       border-radius: 10px;
-      border: 0px;
+      border: solid 1px $clo-gray-border;
       color: white;
-      background-color: green;
+      background-color: $clo-primery;
       margin-top: 15px;
     }
   }

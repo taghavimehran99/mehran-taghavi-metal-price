@@ -1,37 +1,50 @@
 <template>
+  <header class="header">
+    <p>this is page login for web sit Calculate metals price</p>
+    <span>icone</span>
+  </header>
+
   <section class="login-layout">
-    <header class="login-layout-header">login page</header>
     <main class="login-layout-main">
       <router-view />
     </main>
-    <footer class="login-layout-footer">footer</footer>
   </section>
+
+  <footer class="footer">
+    <p>the writer this web sit is Mehran Taghavi .</p>
+    <span>taghavimehran99@gmail.com </span>
+  </footer>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style scoped lang="scss">
+@import '@/assets/varebels.scss';
 .login-layout {
-  background: rgb(209, 209, 209);
+  background: rgb(242, 242, 242);
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
-  width: 90vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
   place-items: center;
   margin: auto;
-
-  &-main {
-    background: red;
-  }
-
-  &-header {
-    background: red;
-  }
-  &-footer {
-    background: red;
-  }
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  background: $clo-primery;
+  padding: 20px;
+  color: $clo-white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background: $clo-primery;
+  padding: 20px;
+  color: $clo-white;
+  font-size: 20px;
+  font-weight: bold;
 }
 </style>
