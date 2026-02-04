@@ -5,18 +5,17 @@
 </template>
 
 <script setup>
-import { onMounted  , ref} from 'vue'
-import axios from 'axios'
+import { onMounted, ref } from 'vue'
+import { api } from '/src/axios/api.js'
 
-
-const silver =ref('')
+const silver = ref('')
 
 async function getSilver() {
   try {
-    const requstsilver = await axios.get('https://api.gold-api.com/price/XAG')
+    const requstsilver = await api.get('XAG')
     const dataSilver = await requstsilver.data
 
-    silver.value=dataSilver.price
+    silver.value = dataSilver.price
 
     console.log(dataSilver)
   } catch (error) {
@@ -24,8 +23,8 @@ async function getSilver() {
   }
 }
 
-onMounted(()=>{
-    getSilver()
+onMounted(() => {
+  getSilver()
 })
 </script>
 

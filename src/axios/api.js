@@ -1,3 +1,6 @@
-// import  axios  from "axios";
+import axios from 'axios'
 
-// cr
+export const api = axios.create({
+  baseURL: 'https://api.gold-api.com/price/',
+  timeout: 5000,
+})
