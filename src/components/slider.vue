@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100px; height: 90vh; border-radius: 12px ;">
+  <div style="width: 180px; height: 90vh;">
     <router-link class="chang-rout" :to="{ name: 'gold' }">Gold</router-link>
     <router-link class="chang-rout" :to="{ name: 'silver' }">silver</router-link>
     <button class="logout" to="login" @click="logOut">log out</button>

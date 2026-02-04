@@ -1,12 +1,20 @@
-h1 {
-  color: red;
-}
-
-.chang-rout {
-  text-decoration: none;
-  display: block;
-}
+// varebels in project 
 
 $clo-primery: #08874d;
 $clo-white: #ffffff;
 $clo-gray-border: #e6e6e6;
+
+
+// global class in project 
+
+// h1 {
+//   color: red;
+// }
+
+.chang-rout {
+  text-decoration: none;
+  display: block;
+  color: $clo-white;
+}
+
+

@@ -1,6 +1,7 @@
 <template>
   <section>
-    <h1>{{ silver }}</h1>
+    <h1 v-if="isloding">loding</h1>
+    <h1 v-else>{{ silver }}</h1>
   </section>
 </template>
 
@@ -9,6 +10,7 @@ import { onMounted, ref } from 'vue'
 import { api } from '/src/axios/api.js'
 
 const silver = ref('')
+const isloding = ref(true)
 
 async function getSilver() {
   try {
@@ -16,6 +18,7 @@ async function getSilver() {
     const dataSilver = await requstsilver.data
 
     silver.value = dataSilver.price
+    isloding.value=false
 
     console.log(dataSilver)
   } catch (error) {
