@@ -16,8 +16,6 @@
   </footer>
 </template>
 
-<script setup></script>
-
 <style scoped lang="scss">
 @import '@/assets/varebels.scss';
 .login-layout {

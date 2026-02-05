@@ -1,5 +1,7 @@
 <template>
-  <header class="header">price page</header>
+  <header class="header">
+    <p>this is page show and Calculate metals price</p>
+  </header>
 
   <section class="contant">
     <slider class="contant-slider" />
@@ -48,7 +50,13 @@ import slider from '@/components/slider.vue'
 }
 
 .header {
-  background: red;
+  display: flex;
+  justify-content: space-around;
+  background: $clo-primery;
+  padding: 20px;
+  color: $clo-white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .footer {

@@ -1,8 +1,12 @@
 <template>
-  <div style="width: 180px; height: 90vh;">
-    <router-link class="chang-rout" :to="{ name: 'gold' }">Gold</router-link>
-    <router-link class="chang-rout" :to="{ name: 'silver' }">silver</router-link>
-    <button class="logout" to="login" @click="logOut">log out</button>
+  <div class="slider">
+    <div>
+      <router-link class="slider-btn btn-gold chang-rout" :to="{ name: 'gold' }">Gold</router-link>
+      <router-link class="slider-btn btn-silver chang-rout" :to="{ name: 'silver' }"
+        >silver</router-link
+      >
+      <button class="slider-logout" to="login" @click="logOut">log out</button>
+    </div>
   </div>
 </template>
 
@@ -17,9 +21,50 @@ function logOut() {
 </script>
 
 <style scoped lang="scss">
-.logout {
-  padding: 5px;
-  background: rgb(199, 97, 97);
-  border-radius: 10px;
+@import '@/assets/varebels.scss';
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  min-height: 90vh;
+
+  &-logout {
+    background: rgb(199, 97, 97);
+    color: $clo-white;
+    border-radius: 10px;
+    border: solid 1px $clo-gray-border;
+    margin: 20px;
+    padding: 8px 40px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(200, 1, 1);
+    }
+  }
+
+  &-btn {
+    display: block;
+    margin: 20px;
+    padding: 8px 40px;
+    background: rgb(150, 150, 150);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.btn-gold {
+  background-color: gold;
+  box-shadow: 0 0 10px $clo-gray-border;
+  &:hover {
+    background-color: goldenrod;
+  }
+}
+.btn-silver {
+  background-color: silver;
+  box-shadow: 0 0 10px $clo-gray-border;
+  &:hover {
+    background-color: rgb(91, 91, 91);
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <section style="display: block;">
-    <h3>this is websit</h3>
+  <section class="page-gold">
+    <p class="page-gold-titel">Calculate gold</p>
     <priceGold />
   </section>
 </template>
@@ -9,4 +9,16 @@
 import priceGold from '@/components/gold.vue'
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.page-gold {
+  display: block;
+  &-titel {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 20px;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+</style>
