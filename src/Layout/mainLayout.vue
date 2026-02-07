@@ -5,19 +5,21 @@
 
   <section class="contant">
     <slider class="contant-slider" />
+    <mobilSlider class="contant-mobil-slider" />
     <main class="contant-main">
       <router-view class="contant-main-rout" />
     </main>
   </section>
 
   <footer class="footer">
-    <p>the writer this web sit is Mehran Taghavi .</p>
+    <p class="footer-descrption">the writer this web sit is Mehran Taghavi .</p>
     <span>taghavimehran99@gmail.com </span>
   </footer>
 </template>
 
 <script setup>
 import slider from '@/components/slider.vue'
+import mobilSlider from '@/components/mobilSlider.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -25,7 +27,7 @@ import slider from '@/components/slider.vue'
 
 .contant {
   display: grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 250px 5fr;
   width: 100%;
   max-width: 1700px;
   min-height: 100vh;
@@ -38,7 +40,12 @@ import slider from '@/components/slider.vue'
     border-radius: 12px;
   }
 
+  &-mobil-slider {
+    display: none;
+  }
+
   &-main {
+    padding: 20px;
     background: rgb(212, 212, 212);
     border-radius: 12px;
     height: 90vh;
@@ -67,5 +74,32 @@ import slider from '@/components/slider.vue'
   color: $clo-white;
   font-size: 20px;
   font-weight: bold;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .contant {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+
+    &-slider {
+      display: none;
+    }
+
+    &-mobil-slider {
+      display: flex;
+    }
+
+    &-main {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer-descrption {
+    display: none;
+  }
 }
 </style>

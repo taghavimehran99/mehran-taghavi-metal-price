@@ -1,9 +1,9 @@
-##### this web sit show price every metal
+ # this web sit show price every metal
 
-#### creat in npm 
+##### creat in npm 
 
-### use api  
+##### use api  
 
-## use pinia
+##### use pinia
 
-# use typescript 
+##### use typescript 
