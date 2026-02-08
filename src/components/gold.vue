@@ -14,14 +14,12 @@
       <button class="calculator-gold-rial" @click.prevent="calculatorGoldRial">Calculate</button>
     </form>
     <div>
-      <h1 class="price-ounce">
-        {{ `ounce of global gold ${globalGoldPrice} $` }}
-      </h1>
-      <h1 class="price-geram">{{ `Gram 24-karat Gold ${gramGold24} $` }}</h1>
-      <h1 class="price-geram">{{ `Gram 18-karat Gold ${gramGold18} $` }}</h1>
-      <h1 class="price-geram-real">
+      <p class="price-ounce">{{ `ounce of global gold ${globalGoldPrice} $` }}</p>
+      <p class="price-geram">{{ `Gram 24-karat Gold ${gramGold24} $` }}</p>
+      <p class="price-geram">{{ `Gram 18-karat Gold ${gramGold18} $` }}</p>
+      <p class="price-geram-real">
         {{ `Gram 18-karat Gold  ${gramGoldReal18}` }} <span v-if="showRial">ريال</span>
-      </h1>
+      </p>
     </div>
   </section>
 </template>
@@ -42,7 +40,7 @@ const showRial = ref(false)
 const calculatorGoldRial = computed(() => {
   const calculatorgram18 = gramGold18.value * Usdet.value
   gramGoldReal18.value = calculatorgram18
-  showRial.value = false
+  showRial.value = true
 })
 
 async function getGold() {
@@ -130,16 +128,17 @@ onMounted(() => {
 }
 
 .price {
-  font-weight: bold;
-  font-size: larger;
   &-ounce {
     color: $clo-ounce;
+    font-size: $-size-30;
   }
   &-geram {
-    color:$clo-gram-usde ;
+    color: $clo-gram-usde;
+    font-size: $-size-30;
   }
   &-geram-real {
-    color:$clo-gram-rial ;
+    color: $clo-gram-rial;
+    font-size: $-size-30;
   }
 }
 </style>

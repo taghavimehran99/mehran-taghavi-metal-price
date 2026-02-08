@@ -15,11 +15,11 @@
     </form>
 
     <div>
-      <h1 class="price-ounce">{{ `ounce silver ${ounceSilver} $ ` }}</h1>
-      <h1 class="price-geram">{{ `gram silver ${gramSilver} $ ` }}</h1>
-      <h1 class="price-geram-real">
+      <p class="price-ounce">{{ `ounce silver ${ounceSilver} $ ` }}</p>
+      <p class="price-geram">{{ `gram silver ${gramSilver} $ ` }}</p>
+      <p class="price-geram-real">
         {{ `Price silver ${PriceSilverRial} ` }}<span v-if="showRial">ريال</span>
-      </h1>
+      </p>
     </div>
   </section>
 </template>
@@ -117,16 +117,17 @@ onMounted(() => {
 }
 
 .price {
-  font-weight: bold;
-  font-size: larger;
   &-ounce {
     color: $clo-ounce;
+    font-size: $-size-30;
   }
   &-geram {
     color: $clo-gram-usde;
+    font-size: $-size-30;
   }
   &-geram-real {
     color: $clo-gram-rial;
+    font-size: $-size-30;
   }
 }
 </style>
