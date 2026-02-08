@@ -18,7 +18,7 @@
       <p class="price-geram">{{ `Gram 24-karat Gold ${gramGold24} $` }}</p>
       <p class="price-geram">{{ `Gram 18-karat Gold ${gramGold18} $` }}</p>
       <p class="price-geram-real">
-        {{ `Gram 18-karat Gold  ${gramGoldReal18}` }} <span v-if="showRial">ريال</span>
+        <span v-if="showRial">{{ `Gram 18-karat Gold ${gramGoldReal18}` }}ريال</span>
       </p>
     </div>
   </section>
@@ -37,11 +37,11 @@ const Usdet = ref(null)
 const isLoginValid = ref(true)
 const showRial = ref(false)
 
-const calculatorGoldRial = computed(() => {
+function calculatorGoldRial() {
   const calculatorgram18 = gramGold18.value * Usdet.value
-  gramGoldReal18.value = calculatorgram18
+  gramGoldReal18.value = calculatorgram18.toLocaleString()
   showRial.value = true
-})
+}
 
 async function getGold() {
   try {

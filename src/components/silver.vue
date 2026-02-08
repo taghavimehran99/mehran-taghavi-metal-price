@@ -45,6 +45,7 @@ async function getSilver() {
 
     gramSilver.value = Math.round(data.price / 31.103)
     islodingvalue.value = false
+    
   } catch (error) {
     console.log(error, `this is error for api  silver `)
   }
@@ -52,7 +53,7 @@ async function getSilver() {
 
 function culatorSilverRial() {
   const calculatorGramSilverUsde = gramSilver.value * Usdet.value
-  PriceSilverRial.value = calculatorGramSilverUsde
+  PriceSilverRial.value = calculatorGramSilverUsde.toLocaleString()
   showRial.value = true
 }
 
