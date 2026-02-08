@@ -52,37 +52,37 @@ function login() {
 
     &-name {
       width: 250px;
-      height: 30px;
-      padding: 3px;
-      border-radius: 10px;
+      height: $-size-30;
+      padding:$-size-3;
+      border-radius:$-size-10;
       border: 0px;
     }
 
     &-password {
       width: 250px;
-      height: 30px;
-      padding: 3px;
-      border-radius: 10px;
+      height: $-size-30;
+      padding:$-size-3;
+      border-radius: $-size-10;
     }
 
     &-info {
       width: 250px;
-      height: 30px;
-      padding: 3px;
-      border-radius: 10px;
-      padding: 10px;
+      height: $-size-30;
+      padding: $-size-3;
+      border-radius: $-size-10;
+      padding: $-size-10;
       border: solid 1px $clo-gray-border;
     }
 
     &-btn {
       width: 250px;
-      height: 30px;
-      padding: 3px;
-      border-radius: 10px;
+      height: $-size-30;
+      padding: $-size-3;
+      border-radius: $-size-10;
       border: solid 1px $clo-gray-border;
       color: $clo-white;
       background-color: $clo-primery;
-      margin-top: 15px;
+      margin-top: $-size-15;
     }
   }
 }

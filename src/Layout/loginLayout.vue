@@ -32,18 +32,18 @@
   display: flex;
   justify-content: space-around;
   background: $clo-primery;
-  padding: 20px;
+  padding: $-size-20;
   color: $clo-white;
-  font-size: 20px;
+  font-size: $-size-20;
   font-weight: bold;
 }
 .footer {
   display: flex;
   justify-content: space-around;
   background: $clo-primery;
-  padding: 20px;
+  padding: $-size-20;
   color: $clo-white;
-  font-size: 20px;
+  font-size: $-size-20;
   font-weight: bold;
 }
 </style>

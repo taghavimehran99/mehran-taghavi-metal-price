@@ -85,14 +85,14 @@ onMounted(() => {
   color: $clo-black;
   font-weight: bold;
   font-size: large;
-  border-radius: 10px;
+  border-radius: $-size-10;
   cursor: pointer;
 }
 
 .get-Usdet {
   padding: 5px 20px;
-  border-radius: 10px;
-  margin: 20px;
+  border-radius: $-size-10;
+  margin: $-size-20;
   border: solid 1px $clo-primery;
   cursor: pointer;
   &:focus {
@@ -105,7 +105,7 @@ onMounted(() => {
 }
 .calculator-silver-rial {
   padding: 8px 117px;
-  border-radius: 10px;
+  border-radius: $-size-10;
   border: solid 1px $clo-gray-border;
   color: $clo-white;
   background-color: $clo-primery;

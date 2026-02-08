@@ -80,7 +80,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: $-size-20;
   min-height: 80vh;
 }
 
@@ -97,13 +97,13 @@ onMounted(() => {
   color: $clo-black;
   font-weight: bold;
   font-size: large;
-  border-radius: 10px;
+  border-radius: $-size-10;
   cursor: pointer;
 }
 
 .get-Usdet {
-  padding: 5px 20px;
-  border-radius: 10px;
+  padding: $-size-5 $-size-20;
+  border-radius: $-size-10;
   margin: 20px;
   border: solid 1px $clo-primery;
   cursor: pointer;
@@ -118,7 +118,7 @@ onMounted(() => {
 
 .calculator-gold-rial {
   padding: 8px 117px;
-  border-radius: 10px;
+  border-radius: $-size-10;
   border: solid 1px $clo-gray-border;
   color: $clo-white;
   background-color: $clo-primery;

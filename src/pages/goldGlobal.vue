@@ -15,8 +15,8 @@ import priceGold from '@/components/gold.vue'
   &-titel {
     display: flex;
     justify-content: center;
-    font-size: 24px;
-    margin: 20px;
+    font-size: $-size-24;
+    margin: $-size-20;
     font-size: x-large;
     font-weight: bold;
   }

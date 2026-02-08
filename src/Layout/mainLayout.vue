@@ -93,8 +93,8 @@ import mobilSlider from '@/components/mobilSlider.vue'
 
     &-main {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
+      padding: $-size-10;
+      margin-bottom: $-size-20;
     }
   }
 
