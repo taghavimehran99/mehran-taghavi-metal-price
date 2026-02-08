@@ -80,7 +80,7 @@ function login() {
       padding: 3px;
       border-radius: 10px;
       border: solid 1px $clo-gray-border;
-      color: white;
+      color: $clo-white;
       background-color: $clo-primery;
       margin-top: 15px;
     }

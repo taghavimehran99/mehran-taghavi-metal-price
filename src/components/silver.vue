@@ -82,7 +82,7 @@ onMounted(() => {
 }
 
 .label-Usdet {
-  color: black;
+  color: $clo-black;
   font-weight: bold;
   font-size: large;
   border-radius: 10px;
@@ -120,13 +120,13 @@ onMounted(() => {
   font-weight: bold;
   font-size: larger;
   &-ounce {
-    color: green;
+    color: $clo-ounce;
   }
   &-geram {
-    color: blue;
+    color: $clo-gram-usde;
   }
   &-geram-real {
-    color: purple;
+    color: $clo-gram-rial;
   }
 }
 </style>

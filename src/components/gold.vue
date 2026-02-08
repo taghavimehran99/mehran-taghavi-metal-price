@@ -15,7 +15,7 @@
     </form>
     <div>
       <h1 class="price-ounce">
-        {{ `ounce of global gold ${globalGoldPrice} $.` }}
+        {{ `ounce of global gold ${globalGoldPrice} $` }}
       </h1>
       <h1 class="price-geram">{{ `Gram 24-karat Gold ${gramGold24} $` }}</h1>
       <h1 class="price-geram">{{ `Gram 18-karat Gold ${gramGold18} $` }}</h1>
@@ -74,6 +74,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
 @import '@/assets/varebels.scss';
+
 .gold {
   display: flex;
   align-items: center;
@@ -93,7 +94,7 @@ onMounted(() => {
 }
 
 .label-Usdet {
-  color: black;
+  color: $clo-black;
   font-weight: bold;
   font-size: large;
   border-radius: 10px;
@@ -132,13 +133,13 @@ onMounted(() => {
   font-weight: bold;
   font-size: larger;
   &-ounce {
-    color: green;
+    color: $clo-ounce;
   }
   &-geram {
-    color: blue;
+    color:$clo-gram-usde ;
   }
   &-geram-real {
-    color: purple;
+    color:$clo-gram-rial ;
   }
 }
 </style>

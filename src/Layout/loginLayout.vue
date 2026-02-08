@@ -18,8 +18,9 @@
 
 <style scoped lang="scss">
 @import '@/assets/varebels.scss';
+
 .login-layout {
-  background: rgb(242, 242, 242);
+  background: $clo-gray-backgrand-login;
   display: grid;
   width: 100%;
   max-width: 1200px;

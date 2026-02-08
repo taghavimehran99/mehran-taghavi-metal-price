@@ -27,14 +27,14 @@ import mobilSlider from '@/components/mobilSlider.vue'
 
 .contant {
   display: grid;
-  grid-template-columns: 250px 5fr;
+  grid-template-columns: 300px 5fr;
   width: 100%;
   max-width: 1700px;
   min-height: 100vh;
   gap: 20px;
 
   &-slider {
-    background: rgb(212, 212, 212);
+    background: $clo-gray-backgrand-main-layout;
     align-self: center;
     justify-self: end;
     border-radius: 12px;
@@ -46,7 +46,7 @@ import mobilSlider from '@/components/mobilSlider.vue'
 
   &-main {
     padding: 20px;
-    background: rgb(212, 212, 212);
+    background: $clo-gray-backgrand-main-layout;
     border-radius: 12px;
     height: 90vh;
     width: 80%;

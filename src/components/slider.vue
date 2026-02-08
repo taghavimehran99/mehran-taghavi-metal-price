@@ -31,7 +31,7 @@ function logOut() {
   min-height: 90vh;
 
   &-logout {
-    background: rgb(199, 97, 97);
+    background: $clo-btn-logout;
     color: $clo-white;
     border-radius: 10px;
     border: solid 1px $clo-gray-border;
@@ -39,7 +39,7 @@ function logOut() {
     padding: 8px 40px;
     cursor: pointer;
     &:hover {
-      background-color: rgb(200, 1, 1);
+      background-color: $clo-btn-logout-hover;
     }
   }
 
@@ -47,24 +47,23 @@ function logOut() {
     display: block;
     margin: 20px;
     padding: 8px 40px;
-    background: rgb(150, 150, 150);
     border-radius: 10px;
     cursor: pointer;
   }
 }
 
 .btn-gold {
-  background-color: gold;
+  background-color: $clo-btn-gold;
   box-shadow: 0 0 10px $clo-gray-border;
   &:hover {
-    background-color: goldenrod;
+    background-color: $clo-btn-gold-hover;
   }
 }
 .btn-silver {
-  background-color: silver;
+  background-color: $clo-btn-silver;
   box-shadow: 0 0 10px $clo-gray-border;
   &:hover {
-    background-color: rgb(91, 91, 91);
+    background-color: $clo-btn-silver-hover;
   }
 }
 </style>

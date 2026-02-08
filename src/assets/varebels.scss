@@ -1,11 +1,34 @@
 // varebels in project
 
+// colors
 $clo-primery: #08874d;
 $clo-white: #ffffff;
+$clo-black: #000000;
 $clo-gray-border: #e6e6e6;
+$clo-gray-backgrand-main-layout: #d4d4d4;
+$clo-gray-backgrand-login: #f2f2f2;
+
+$clo-btn-logout: #c76161;
+$clo-btn-gold: #ffd700;
+$clo-btn-silver: #c0c0c0;
+
+
+$clo-ounce: #008000;
+$clo-gram-usde: #0000ff;
+$clo-gram-rial: #800080;
+
+//  colors hover
+$clo-btn-logout-hover: #c80101;
+$clo-btn-gold-hover: #daa520;
+$clo-btn-silver-hover: #5b5b5b;
+
+//  font size
+
+//  font-weight
+
+// fw-
 
 // global class in project
-
 
 .chang-rout {
   text-decoration: none;
@@ -13,6 +36,3 @@ $clo-gray-border: #e6e6e6;
   color: $clo-white;
   cursor: pointer;
 }
-
-
-
