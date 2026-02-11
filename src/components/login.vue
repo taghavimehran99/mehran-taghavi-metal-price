@@ -20,14 +20,14 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-const name = ref('')
-const password = ref('')
-const isligon = ref(true)
-const blanckInputValue = ref(false)
+const name = ref<string>('')
+const password = ref<string>('')
+const isligon = ref<boolean>(true)
+const blanckInputValue = ref<boolean>(false)
 const router = useRouter()
 
 function login() {

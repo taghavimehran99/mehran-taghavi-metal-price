@@ -24,7 +24,7 @@
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { api } from '@/axios/api'
 
@@ -33,7 +33,6 @@ const gramGold24 = ref<number>(0)
 const gramGold18 = ref<number>(0)
 const gramGoldReal18 = ref<string>('')
 const Usdet = ref<number | null>(null)
-
 const isLoginValid = ref<boolean>(true)
 const showRial = ref<boolean>(false)
 

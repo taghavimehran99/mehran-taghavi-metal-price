@@ -24,17 +24,24 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { api } from '/src/axios/api.js'
+import { api } from '@/axios/api'
 
-const ounceSilver = ref('')
-const gramSilver = ref('')
-const PriceSilverRial = ref('')
-const Usdet = ref(null)
+const ounceSilver = ref<number>(0)
+const gramSilver = ref<number>(0)
+const PriceSilverRial = ref<string>('')
+const Usdet = ref<number | null>(null)
+const islodingvalue = ref<boolean>(true)
+const showRial = ref<boolean>(false)
 
-const islodingvalue = ref(true)
-const showRial = ref(false)
+function culatorSilverRial() {
+  if (Usdet.value !== null) {
+    const calculatorGramSilverUsde = gramSilver.value * Usdet.value
+    PriceSilverRial.value = calculatorGramSilverUsde.toLocaleString()
+    showRial.value = true
+  }
+}
 
 async function getSilver() {
   try {
@@ -45,16 +52,9 @@ async function getSilver() {
 
     gramSilver.value = Math.round(data.price / 31.103)
     islodingvalue.value = false
-    
   } catch (error) {
     console.log(error, `this is error for api  silver `)
   }
-}
-
-function culatorSilverRial() {
-  const calculatorGramSilverUsde = gramSilver.value * Usdet.value
-  PriceSilverRial.value = calculatorGramSilverUsde.toLocaleString()
-  showRial.value = true
 }
 
 onMounted(() => {
@@ -63,7 +63,6 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-
 .silver {
   display: flex;
   align-items: center;
