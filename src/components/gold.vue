@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import {  onMounted, ref } from 'vue'
 import { api } from '@/axios/api.js'
 
 const globalGoldPrice = ref(null)
