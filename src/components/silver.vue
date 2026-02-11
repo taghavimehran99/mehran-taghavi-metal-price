@@ -46,7 +46,7 @@ function culatorSilverRial() {
 async function getSilver() {
   try {
     const res = await api.get('XAG')
-    const data = await res.data
+    const data = res.data
 
     ounceSilver.value = data.price
 

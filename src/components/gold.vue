@@ -47,7 +47,7 @@ function calculatorGoldRial() {
 async function getGold() {
   try {
     const res = await api.get('XAU')
-    const data = await res.data
+    const data = res.data
 
     globalGoldPrice.value = Math.round(data.price)
     isLoginValid.value = false
