@@ -42,7 +42,6 @@ function login() {
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/varebels.scss';
 
 .login {
   &-form {

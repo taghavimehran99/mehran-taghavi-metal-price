@@ -17,7 +17,6 @@
 </template>
 
 <style scoped lang="scss">
-@import '@/assets/varebels.scss';
 
 .login-layout {
   background: $clo-gray-backgrand-login;

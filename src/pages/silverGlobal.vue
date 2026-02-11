@@ -11,8 +11,6 @@ import priceSilver from '@/components/silver.vue'
 
 <style lang="scss" scoped>
 
-@import '@/assets/varebels.scss';
-
 .page-silver {
   display: block;
   &-titel {

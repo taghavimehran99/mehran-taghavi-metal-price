@@ -10,7 +10,6 @@ import priceGold from '@/components/gold.vue'
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/varebels.scss';
 
 .page-gold {
   display: block;

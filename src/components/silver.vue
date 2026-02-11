@@ -63,7 +63,6 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/varebels.scss';
 
 .silver {
   display: flex;

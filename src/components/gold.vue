@@ -71,7 +71,6 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/varebels.scss';
 
 .gold {
   display: flex;

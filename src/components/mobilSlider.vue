@@ -19,7 +19,6 @@ function logOut() {
 </script>
 
 <style scoped lang="scss">
-@import '@/assets/varebels.scss';
 
 .mobil {
   &-slider {

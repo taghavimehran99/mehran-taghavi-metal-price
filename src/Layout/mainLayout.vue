@@ -23,7 +23,6 @@ import mobilSlider from '@/components/mobilSlider.vue'
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/varebels.scss';
 
 .contant {
   display: grid;
