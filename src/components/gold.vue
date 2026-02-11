@@ -24,23 +24,25 @@
   </section>
 </template>
 
-<script setup>
-import {  onMounted, ref } from 'vue'
-import { api } from '@/axios/api.js'
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+import { api } from '@/axios/api'
 
-const globalGoldPrice = ref(null)
-const gramGold24 = ref(null)
-const gramGold18 = ref(null)
-const gramGoldReal18 = ref('')
-const Usdet = ref(null)
+const globalGoldPrice = ref<number>(0)
+const gramGold24 = ref<number>(0)
+const gramGold18 = ref<number>(0)
+const gramGoldReal18 = ref<string>('')
+const Usdet = ref<number | null>(null)
 
-const isLoginValid = ref(true)
-const showRial = ref(false)
+const isLoginValid = ref<boolean>(true)
+const showRial = ref<boolean>(false)
 
 function calculatorGoldRial() {
-  const calculatorgram18 = gramGold18.value * Usdet.value
-  gramGoldReal18.value = calculatorgram18.toLocaleString()
-  showRial.value = true
+  if (Usdet.value !== null) {
+    const calculatorgram18 = gramGold18.value * Usdet.value
+    gramGoldReal18.value = calculatorgram18.toLocaleString()
+    showRial.value = true
+  }
 }
 
 async function getGold() {
@@ -71,7 +73,6 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-
 .gold {
   display: flex;
   align-items: center;
