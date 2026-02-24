@@ -11,6 +11,7 @@
         placeholder="how much is Usdet"
       />
       <br />
+      <button class="new-price-gold" @click.prevent="getGold">new price gold</button>
       <button class="calculator-gold-rial" @click.prevent="calculatorGoldRial">Calculate</button>
     </form>
     <div>
@@ -114,6 +115,19 @@ onMounted(() => {
 }
 
 .calculator-gold-rial {
+  padding: 8px 117px;
+  border-radius: $-size-10;
+  border: solid 1px $clo-gray-border;
+  color: $clo-white;
+  background-color: $clo-primery;
+  cursor: pointer;
+  &:hover {
+    background-color: $clo-primery;
+    opacity: 0.8;
+  }
+}
+
+.new-price-gold {
   padding: 8px 117px;
   border-radius: $-size-10;
   border: solid 1px $clo-gray-border;

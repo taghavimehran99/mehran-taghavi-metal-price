@@ -11,6 +11,7 @@
         placeholder="how much is Usdet"
       />
       <br />
+      <button class="new-price-silver" @click.prevent="getSilver">new price silver</button>
       <button class="calculator-silver-rial" @click.prevent="culatorSilverRial">Calculate</button>
     </form>
 
@@ -103,6 +104,19 @@ onMounted(() => {
   }
 }
 .calculator-silver-rial {
+  padding: 8px 117px;
+  border-radius: $-size-10;
+  border: solid 1px $clo-gray-border;
+  color: $clo-white;
+  background-color: $clo-primery;
+  cursor: pointer;
+  &:hover {
+    background-color: $clo-primery;
+    opacity: 0.8;
+  }
+}
+
+.new-price-silver {
   padding: 8px 117px;
   border-radius: $-size-10;
   border: solid 1px $clo-gray-border;
